@@ -7,9 +7,9 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
-    ChangeNotifierProvider<CityEntryViewModel>(
+    ChangeNotifierProvider(
         create: (_) => CityEntryViewModel()),
-    ChangeNotifierProvider<ForecastViewModel>(
+    ChangeNotifierProvider(
         create: (_) => ForecastViewModel()),
   ], child: MyApp()));
 }
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Weather Provider',
-      home: HomeScreen(),
+      home: HomeView(),
       debugShowCheckedModeBanner: false,
     );
   }
