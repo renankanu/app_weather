@@ -1,5 +1,6 @@
 import 'package:app_weather/models/weather.dart';
-import 'package:app_weather/utils/weather_app_utils_temperature_convert.dart';
+import 'package:app_weather/utils/images.dart';
+import 'package:app_weather/utils/temperature_convert.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -52,36 +53,36 @@ class DailySummaryView extends StatelessWidget {
     Image image;
     switch (condition) {
       case WeatherCondition.thunderstorm:
-        image = Image.asset('assets/images/thunder_storm_small.png');
+        image = Image.asset(Images.thunderstorm);
         break;
       case WeatherCondition.heavyCloud:
-        image = Image.asset('assets/images/cloudy_small.png');
+        image = Image.asset(Images.heavyCloud);
         break;
       case WeatherCondition.lightCloud:
-        image = Image.asset('assets/images/light_cloud_small.png');
+        image = Image.asset(Images.lightCloud);
         break;
       case WeatherCondition.drizzle:
       case WeatherCondition.mist:
-        image = Image.asset('assets/images/drizzle_small.png');
+        image = Image.asset(Images.drizzle);
         break;
       case WeatherCondition.clear:
-        image = Image.asset('assets/images/clear_small.png');
+        image = Image.asset(Images.clear);
         break;
       case WeatherCondition.fog:
-        image = Image.asset('assets/images/fog_small.png');
+        image = Image.asset('');
         break;
       case WeatherCondition.snow:
-        image = Image.asset('assets/images/snow_small.png');
+        image = Image.asset(Images.fog);
         break;
       case WeatherCondition.rain:
-        image = Image.asset('assets/images/rain_small.png');
+        image = Image.asset(Images.rain);
         break;
       case WeatherCondition.atmosphere:
-        image = Image.asset('assets/images/atmosphere_small.png');
+        image = Image.asset(Images.atmosphere);
         break;
 
       default:
-        image = Image.asset('assets/images/light_cloud_small.png');
+        image = Image.asset(Images.lightCloud);
     }
 
     return Padding(padding: const EdgeInsets.only(top: 5), child: image);
