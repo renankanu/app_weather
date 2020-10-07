@@ -56,85 +56,85 @@ class WeatherSummary extends StatelessWidget {
       case WeatherCondition.thunderstorm:
         image = Image.asset(
           'assets/images/thunder_storm.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
         break;
       case WeatherCondition.heavyCloud:
         image = Image.asset(
           'assets/images/cloudy.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
         break;
       case WeatherCondition.lightCloud:
         isDayTime
             ? image = Image.asset(
                 'assets/images/light_cloud.png',
-                width: 50,
-                height: 50,
+                width: 80,
+                height: 80,
               )
             : image = Image.asset(
                 'assets/images/light_cloud-night.png',
-                width: 50,
-                height: 50,
+                width: 80,
+                height: 80,
               );
         break;
       case WeatherCondition.drizzle:
       case WeatherCondition.mist:
         image = Image.asset(
           'assets/images/drizzle.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
         break;
       case WeatherCondition.clear:
         isDayTime
             ? image = Image.asset(
                 'assets/images/clear.png',
-                width: 50,
-                height: 50,
+                width: 80,
+                height: 80,
               )
             : image = Image.asset(
                 'assets/images/clear-night.png',
-                width: 50,
-                height: 50,
+                width: 80,
+                height: 80,
               );
         break;
       case WeatherCondition.fog:
         image = Image.asset(
           'assets/images/fog.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
         break;
       case WeatherCondition.snow:
         image = Image.asset(
           'assets/images/snow.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
         break;
       case WeatherCondition.rain:
         image = Image.asset(
           'assets/images/rain.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
         break;
       case WeatherCondition.atmosphere:
         image = Image.asset(
           'assets/images/fog.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
         break;
 
       default:
         image = Image.asset(
           'assets/images/unknown.png',
-          width: 50,
-          height: 50,
+          width: 80,
+          height: 80,
         );
     }
 

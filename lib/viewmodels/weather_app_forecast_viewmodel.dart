@@ -79,7 +79,7 @@ class ForecastViewModel with ChangeNotifier {
     if (isRequestError) return;
 
     _condition = forecast.current.condition;
-    _city = Strings.toTitleCase(forecast.city);
+    _city = Strings.toTitleCase(city);
     _description = Strings.toTitleCase(forecast.current.description);
     _lastUpdated = forecast.lastUpdated;
     _temp = TemperatureConvert.kelvinToCelsius(forecast.current.temp);
