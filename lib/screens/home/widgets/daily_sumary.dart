@@ -1,5 +1,5 @@
 import 'package:app_weather/models/weather.dart';
-import 'package:app_weather/utils/images.dart';
+import 'package:app_weather/utils/images_small.dart';
 import 'package:app_weather/utils/temperature_convert.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -53,36 +53,36 @@ class DailySummaryView extends StatelessWidget {
     Image image;
     switch (condition) {
       case WeatherCondition.thunderstorm:
-        image = Image.asset(Images.thunderstorm);
+        image = Image.asset(ImagesSmall.thunderstorm);
         break;
       case WeatherCondition.heavyCloud:
-        image = Image.asset(Images.heavyCloud);
+        image = Image.asset(ImagesSmall.heavyCloud);
         break;
       case WeatherCondition.lightCloud:
-        image = Image.asset(Images.lightCloud);
+        image = Image.asset(ImagesSmall.lightCloud);
         break;
       case WeatherCondition.drizzle:
       case WeatherCondition.mist:
-        image = Image.asset(Images.drizzle);
+        image = Image.asset(ImagesSmall.drizzle);
         break;
       case WeatherCondition.clear:
-        image = Image.asset(Images.clear);
+        image = Image.asset(ImagesSmall.clear);
         break;
       case WeatherCondition.fog:
         image = Image.asset('');
         break;
       case WeatherCondition.snow:
-        image = Image.asset(Images.fog);
+        image = Image.asset(ImagesSmall.fog);
         break;
       case WeatherCondition.rain:
-        image = Image.asset(Images.rain);
+        image = Image.asset(ImagesSmall.rain);
         break;
       case WeatherCondition.atmosphere:
-        image = Image.asset(Images.atmosphere);
+        image = Image.asset(ImagesSmall.atmosphere);
         break;
 
       default:
-        image = Image.asset(Images.lightCloud);
+        image = Image.asset(ImagesSmall.lightCloud);
     }
 
     return Padding(padding: const EdgeInsets.only(top: 5), child: image);

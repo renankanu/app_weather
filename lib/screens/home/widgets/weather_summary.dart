@@ -1,4 +1,5 @@
 import 'package:app_weather/models/weather.dart';
+import 'package:app_weather/utils/images.dart';
 import 'package:flutter/material.dart';
 
 class WeatherSummary extends StatelessWidget {
@@ -55,14 +56,14 @@ class WeatherSummary extends StatelessWidget {
     switch (condition) {
       case WeatherCondition.thunderstorm:
         image = Image.asset(
-          'assets/images/thunder_storm.png',
+          Images.thunderstorm,
           width: 80,
           height: 80,
         );
         break;
       case WeatherCondition.heavyCloud:
         image = Image.asset(
-          'assets/images/cloudy.png',
+          Images.heavyCloud,
           width: 80,
           height: 80,
         );
@@ -70,12 +71,12 @@ class WeatherSummary extends StatelessWidget {
       case WeatherCondition.lightCloud:
         isDayTime
             ? image = Image.asset(
-                'assets/images/light_cloud.png',
+                Images.lightCloud,
                 width: 80,
                 height: 80,
               )
             : image = Image.asset(
-                'assets/images/light_cloud-night.png',
+                Images.lightCloudNight,
                 width: 80,
                 height: 80,
               );
@@ -83,7 +84,7 @@ class WeatherSummary extends StatelessWidget {
       case WeatherCondition.drizzle:
       case WeatherCondition.mist:
         image = Image.asset(
-          'assets/images/drizzle.png',
+          Images.drizzle,
           width: 80,
           height: 80,
         );
@@ -91,40 +92,40 @@ class WeatherSummary extends StatelessWidget {
       case WeatherCondition.clear:
         isDayTime
             ? image = Image.asset(
-                'assets/images/clear.png',
+                Images.clear,
                 width: 80,
                 height: 80,
               )
             : image = Image.asset(
-                'assets/images/clear-night.png',
+                Images.clearNight,
                 width: 80,
                 height: 80,
               );
         break;
       case WeatherCondition.fog:
         image = Image.asset(
-          'assets/images/fog.png',
+          Images.fog,
           width: 80,
           height: 80,
         );
         break;
       case WeatherCondition.snow:
         image = Image.asset(
-          'assets/images/snow.png',
+          Images.snow,
           width: 80,
           height: 80,
         );
         break;
       case WeatherCondition.rain:
         image = Image.asset(
-          'assets/images/rain.png',
+          Images.rain,
           width: 80,
           height: 80,
         );
         break;
       case WeatherCondition.atmosphere:
         image = Image.asset(
-          'assets/images/fog.png',
+          Images.fog,
           width: 80,
           height: 80,
         );
@@ -132,7 +133,7 @@ class WeatherSummary extends StatelessWidget {
 
       default:
         image = Image.asset(
-          'assets/images/unknown.png',
+          Images.unknown,
           width: 80,
           height: 80,
         );
