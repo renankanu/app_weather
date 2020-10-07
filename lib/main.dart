@@ -1,6 +1,6 @@
 import 'package:app_weather/screens/home/home_screen.dart';
-import 'package:app_weather/viewmodels/weather_app_city_entry_viewmodel.dart';
-import 'package:app_weather/viewmodels/weather_app_forecast_viewmodel.dart';
+import 'package:app_weather/viewmodels/city_entry_viewmodel.dart';
+import 'package:app_weather/viewmodels/forecast_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

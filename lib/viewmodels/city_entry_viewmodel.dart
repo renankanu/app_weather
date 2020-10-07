@@ -1,4 +1,4 @@
-import 'package:app_weather/viewmodels/weather_app_forecast_viewmodel.dart';
+import 'package:app_weather/viewmodels/forecast_viewmodel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';

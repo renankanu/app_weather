@@ -6,8 +6,8 @@ import 'package:app_weather/screens/home/widgets/last_update.dart';
 import 'package:app_weather/screens/home/widgets/location.dart';
 import 'package:app_weather/screens/home/widgets/weather_description.dart';
 import 'package:app_weather/screens/home/widgets/weather_summary.dart';
-import 'package:app_weather/viewmodels/weather_app_city_entry_viewmodel.dart';
-import 'package:app_weather/viewmodels/weather_app_forecast_viewmodel.dart';
+import 'package:app_weather/viewmodels/city_entry_viewmodel.dart';
+import 'package:app_weather/viewmodels/forecast_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -52,32 +52,32 @@ class _HomeViewState extends State<HomeView> {
                     weatherViewModel.isRequestPending
                         ? buildBusyIndicator()
                         : weatherViewModel.isRequestError
-                        ? Center(
-                        child: Text('Ooops...something went wrong',
-                            style: TextStyle(
-                                fontSize: 21, color: Colors.white)))
-                        : Column(children: [
-                      LocationView(
-                        longitude: weatherViewModel.longitude,
-                        latitude: weatherViewModel.latitide,
-                        city: weatherViewModel.city,
-                      ),
-                      SizedBox(height: 50),
-                      WeatherSummary(
-                          condition: weatherViewModel.condition,
-                          temp: weatherViewModel.temp,
-                          feelsLike: weatherViewModel.feelsLike,
-                          isdayTime: weatherViewModel.isDaytime),
-                      SizedBox(height: 20),
-                      WeatherDescriptionView(
-                          weatherDescription:
-                          weatherViewModel.description),
-                      SizedBox(height: 140),
-                      buildDailySummary(weatherViewModel.daily),
-                      LastUpdatedView(
-                          lastUpdatedOn:
-                          weatherViewModel.lastUpdated),
-                    ]),
+                            ? Center(
+                                child: Text('Ooops...something went wrong',
+                                    style: TextStyle(
+                                        fontSize: 21, color: Colors.white)))
+                            : Column(children: [
+                                LocationView(
+                                  longitude: weatherViewModel.longitude,
+                                  latitude: weatherViewModel.latitide,
+                                  city: weatherViewModel.city,
+                                ),
+                                SizedBox(height: 50),
+                                WeatherSummary(
+                                    condition: weatherViewModel.condition,
+                                    temp: weatherViewModel.temp,
+                                    feelsLike: weatherViewModel.feelsLike,
+                                    isdayTime: weatherViewModel.isDaytime),
+                                SizedBox(height: 20),
+                                WeatherDescriptionView(
+                                    weatherDescription:
+                                        weatherViewModel.description),
+                                SizedBox(height: 140),
+                                buildDailySummary(weatherViewModel.daily),
+                                LastUpdatedView(
+                                    lastUpdatedOn:
+                                        weatherViewModel.lastUpdated),
+                              ]),
                   ],
                 ))));
   }
@@ -103,8 +103,8 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: dailyForecast
             .map((item) => new DailySummaryView(
-          weather: item,
-        ))
+                  weather: item,
+                ))
             .toList());
   }
 
