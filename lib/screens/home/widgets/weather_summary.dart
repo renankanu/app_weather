@@ -9,10 +9,10 @@ class WeatherSummary extends StatelessWidget {
 
   WeatherSummary(
       {Key key,
-        @required this.condition,
-        @required this.temp,
-        @required this.feelsLike,
-        @required this.isdayTime})
+      @required this.condition,
+      @required this.temp,
+      @required this.feelsLike,
+      @required this.isdayTime})
       : super(key: key);
 
   @override
@@ -54,40 +54,88 @@ class WeatherSummary extends StatelessWidget {
     Image image;
     switch (condition) {
       case WeatherCondition.thunderstorm:
-        image = Image.asset('assets/images/thunder_storm.png');
+        image = Image.asset(
+          'assets/images/thunder_storm.png',
+          width: 50,
+          height: 50,
+        );
         break;
       case WeatherCondition.heavyCloud:
-        image = Image.asset('assets/images/cloudy.png');
+        image = Image.asset(
+          'assets/images/cloudy.png',
+          width: 50,
+          height: 50,
+        );
         break;
       case WeatherCondition.lightCloud:
         isDayTime
-            ? image = Image.asset('assets/images/light_cloud.png')
-            : image = Image.asset('assets/images/light_cloud-night.png');
+            ? image = Image.asset(
+                'assets/images/light_cloud.png',
+                width: 50,
+                height: 50,
+              )
+            : image = Image.asset(
+                'assets/images/light_cloud-night.png',
+                width: 50,
+                height: 50,
+              );
         break;
       case WeatherCondition.drizzle:
       case WeatherCondition.mist:
-        image = Image.asset('assets/images/drizzle.png');
+        image = Image.asset(
+          'assets/images/drizzle.png',
+          width: 50,
+          height: 50,
+        );
         break;
       case WeatherCondition.clear:
         isDayTime
-            ? image = Image.asset('assets/images/clear.png')
-            : image = Image.asset('assets/images/clear-night.png');
+            ? image = Image.asset(
+                'assets/images/clear.png',
+                width: 50,
+                height: 50,
+              )
+            : image = Image.asset(
+                'assets/images/clear-night.png',
+                width: 50,
+                height: 50,
+              );
         break;
       case WeatherCondition.fog:
-        image = Image.asset('assets/images/fog.png');
+        image = Image.asset(
+          'assets/images/fog.png',
+          width: 50,
+          height: 50,
+        );
         break;
       case WeatherCondition.snow:
-        image = Image.asset('assets/images/snow.png');
+        image = Image.asset(
+          'assets/images/snow.png',
+          width: 50,
+          height: 50,
+        );
         break;
       case WeatherCondition.rain:
-        image = Image.asset('assets/images/rain.png');
+        image = Image.asset(
+          'assets/images/rain.png',
+          width: 50,
+          height: 50,
+        );
         break;
       case WeatherCondition.atmosphere:
-        image = Image.asset('assets/images/fog.png');
+        image = Image.asset(
+          'assets/images/fog.png',
+          width: 50,
+          height: 50,
+        );
         break;
 
       default:
-        image = Image.asset('assets/images/unknown.png');
+        image = Image.asset(
+          'assets/images/unknown.png',
+          width: 50,
+          height: 50,
+        );
     }
 
     return Padding(padding: const EdgeInsets.only(top: 5), child: image);

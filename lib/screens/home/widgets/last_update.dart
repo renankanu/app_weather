@@ -5,7 +5,6 @@ class LastUpdatedView extends StatelessWidget {
 
   const LastUpdatedView({Key key, this.lastUpdatedOn}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return Padding(

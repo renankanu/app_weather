@@ -7,16 +7,16 @@ class LocationView extends StatelessWidget {
 
   LocationView(
       {Key key,
-        @required this.longitude,
-        @required this.latitude,
-        @required this.city})
+      @required this.longitude,
+      @required this.latitude,
+      @required this.city})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(children: [
-        Text('${this.city.toUpperCase()}',
+        Text('${this.city}',
             style: TextStyle(
               fontSize: 40,
               fontWeight: FontWeight.w300,

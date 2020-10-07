@@ -13,7 +13,7 @@ class DailySummaryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dayOfWeek =
-    toBeginningOfSentenceCase(DateFormat('EEE').format(this.weather.date));
+        toBeginningOfSentenceCase(DateFormat('EEE').format(this.weather.date));
 
     return Padding(
         padding: EdgeInsets.all(15),
@@ -37,6 +37,8 @@ class DailySummaryView extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(left: 5),
                 child: Container(
+                    width: 42,
+                    height: 42,
                     alignment: Alignment.center,
                     child: _mapWeatherConditionToImage(this.weather.condition)))
           ],

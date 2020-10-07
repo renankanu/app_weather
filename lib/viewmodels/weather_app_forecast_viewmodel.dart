@@ -15,18 +15,18 @@ class ForecastViewModel with ChangeNotifier {
   bool isRequestError = false;
 
   WeatherCondition _condition;
-  String _description;
-  double _minTemp;
-  double _maxTemp;
-  double _temp;
-  double _feelsLike;
-  int _locationId;
-  DateTime _lastUpdated;
-  String _city;
-  double _latitude;
-  double _longitude;
-  List<Weather> _daily;
-  bool _isDayTime;
+  String _description = "";
+  double _minTemp = 0.0;
+  double _maxTemp = 0.0;
+  double _temp = 0.0;
+  double _feelsLike = 0.0;
+  int _locationId = 0;
+  DateTime _lastUpdated = new DateTime(2020);
+  String _city = "";
+  double _latitude = 0.0;
+  double _longitude = 0.0;
+  List<Weather> _daily = [];
+  bool _isDayTime = false;
 
   WeatherCondition get condition => _condition;
   String get description => _description;
@@ -45,8 +45,7 @@ class ForecastViewModel with ChangeNotifier {
   ForecastService forecastService;
 
   ForecastViewModel() {
-    forecastService =
-        ForecastService(OpenWeatherMapWeatherApi());
+    forecastService = ForecastService(OpenWeatherMapWeatherApi());
   }
 
   Future<Forecast> getLatestWeather(String city) async {
