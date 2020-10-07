@@ -1,4 +1,4 @@
-import 'package:app_weather/utils/weather_app_utils_strings.dart';
+import 'package:app_weather/utils/strings.dart';
 
 enum WeatherCondition {
   thunderstorm,
@@ -24,11 +24,11 @@ class Weather {
 
   Weather(
       {this.condition,
-        this.description,
-        this.temp,
-        this.feelLikeTemp,
-        this.cloudiness,
-        this.date});
+      this.description,
+      this.temp,
+      this.feelLikeTemp,
+      this.cloudiness,
+      this.date});
 
   static Weather fromDailyJson(dynamic daily) {
     var cloudiness = daily['clouds'];

@@ -20,19 +20,22 @@ class DailySummaryView extends StatelessWidget {
         child: Row(
           children: [
             Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-              Text(dayOfWeek ?? '',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w300)),
               Text(
-                  "${TemperatureConvert.kelvinToCelsius(this.weather.temp).round().toString()}°",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500)),
+                dayOfWeek ?? '',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w300),
+              ),
+              Text(
+                "${TemperatureConvert.kelvinToCelsius(this.weather.temp).round().toString()}°",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500),
+              ),
             ]),
             Padding(
                 padding: EdgeInsets.only(left: 5),

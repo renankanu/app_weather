@@ -4,7 +4,7 @@ import 'package:app_weather/api/openweathermap_weather_api.dart';
 import 'package:app_weather/models/forecast.dart';
 import 'package:app_weather/models/weather.dart';
 import 'package:app_weather/services/forecast_service.dart';
-import 'package:app_weather/utils/weather_app_utils_strings.dart';
+import 'package:app_weather/utils/strings.dart';
 import 'package:app_weather/utils/weather_app_utils_temperature_convert.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
